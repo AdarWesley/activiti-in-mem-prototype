@@ -141,6 +141,7 @@ public class InMemoryExecutionDataManager extends AbstractInMemoryDataManager<Ex
     throw new UnsupportedOperationException();
   }
 
-  
-
+	public void updateAllExecutionRelatedEntityCountFlags(boolean newValue) {
+	    throw new UnsupportedOperationException();
+	}
 }

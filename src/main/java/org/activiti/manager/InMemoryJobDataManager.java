@@ -8,11 +8,11 @@ import org.activiti.engine.impl.JobQueryImpl;
 import org.activiti.engine.impl.Page;
 import org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl;
 import org.activiti.engine.impl.persistence.entity.JobEntity;
-import org.activiti.engine.impl.persistence.entity.MessageEntity;
-import org.activiti.engine.impl.persistence.entity.MessageEntityImpl;
+//import org.activiti.engine.impl.persistence.entity.MessageEntity;
+//import org.activiti.engine.impl.persistence.entity.MessageEntityImpl;
 import org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity;
-import org.activiti.engine.impl.persistence.entity.TimerEntity;
-import org.activiti.engine.impl.persistence.entity.TimerEntityImpl;
+//import org.activiti.engine.impl.persistence.entity.TimerEntity;
+//import org.activiti.engine.impl.persistence.entity.TimerEntityImpl;
 import org.activiti.engine.impl.persistence.entity.data.JobDataManager;
 import org.activiti.engine.runtime.Job;
 
@@ -25,13 +25,13 @@ public class InMemoryJobDataManager extends AbstractInMemoryDataManager<JobEntit
     super(processEngineConfiguration);
   }
 
-  public MessageEntity createMessage() {
-    return new MessageEntityImpl();
-  }
-  
-  public TimerEntity createTimer() {
-    return new TimerEntityImpl();
-  }
+//  public MessageEntity createMessage() {
+//    return new MessageEntityImpl();
+//  }
+//  
+//  public TimerEntity createTimer() {
+//    return new TimerEntityImpl();
+//  }
   
   public JobEntity create() {
     // Superclass cannot be created
@@ -68,13 +68,13 @@ public class InMemoryJobDataManager extends AbstractInMemoryDataManager<JobEntit
     throw new UnsupportedOperationException();
   }
 
-  public List<TimerEntity> findUnlockedTimersByDuedate(Date duedate, Page page) {
-    throw new UnsupportedOperationException();
-  }
-
-  public List<TimerEntity> findTimersByExecutionId(String executionId) {
-    throw new UnsupportedOperationException();
-  }
+//  public List<TimerEntity> findUnlockedTimersByDuedate(Date duedate, Page page) {
+//    throw new UnsupportedOperationException();
+//  }
+//
+//  public List<TimerEntity> findTimersByExecutionId(String executionId) {
+//    throw new UnsupportedOperationException();
+//  }
 
   public List<Job> findJobsByQueryCriteria(JobQueryImpl jobQuery, Page page) {
     throw new UnsupportedOperationException();
@@ -99,11 +99,11 @@ public class InMemoryJobDataManager extends AbstractInMemoryDataManager<JobEntit
     return results;
   }
 
-  public List<Job> findJobsByTypeAndProcessDefinitionKeyAndTenantId(String jobHandlerType, String processDefinitionKey, String tenantId) {
-    throw new UnsupportedOperationException();
-  }
+//  public List<Job> findJobsByTypeAndProcessDefinitionKeyAndTenantId(String jobHandlerType, String processDefinitionKey, String tenantId) {
+//    throw new UnsupportedOperationException();
+//  }
 
-  public List<Job> findJobsByTypeAndProcessDefinitionId(String jobHandlerType, String processDefinitionId) {
+  public List<JobEntity> findJobsByTypeAndProcessDefinitionId(String jobHandlerType, String processDefinitionId) {
     throw new UnsupportedOperationException();
   }
 
@@ -114,5 +114,25 @@ public class InMemoryJobDataManager extends AbstractInMemoryDataManager<JobEntit
   public void updateJobTenantIdForDeployment(String deploymentId, String newTenantId) {
     throw new UnsupportedOperationException();
   }
+
+	public List<JobEntity> findJobsToExecute(Page page) {
+	    throw new UnsupportedOperationException();
+	}
+	
+	public List<JobEntity> findJobsByProcessDefinitionId(String processDefinitionId) {
+	    throw new UnsupportedOperationException();
+	}
+	
+	public List<JobEntity> findJobsByProcessInstanceId(String processInstanceId) {
+	    throw new UnsupportedOperationException();
+	}
+	
+	public List<JobEntity> findExpiredJobs(Page page) {
+	    throw new UnsupportedOperationException();
+	}
+	
+	public void resetExpiredJob(String jobId) {
+	    throw new UnsupportedOperationException();
+	}
 
 }

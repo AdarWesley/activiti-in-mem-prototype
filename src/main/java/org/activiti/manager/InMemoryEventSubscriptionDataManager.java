@@ -111,4 +111,9 @@ public class InMemoryEventSubscriptionDataManager extends AbstractInMemoryDataMa
     throw new UnsupportedOperationException();    
   }
 
+	public List<EventSubscriptionEntity> findEventSubscriptionsByTypeAndProcessDefinitionId(String type,
+			String processDefinitionId, String tenantId) {
+	    throw new UnsupportedOperationException();    
+	}
+
 }

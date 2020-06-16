@@ -54,4 +54,8 @@ public class InMemoryHistoricTaskInstanceDataManager extends AbstractInMemoryDat
     throw new UnsupportedOperationException();
   }
 
+	public List<HistoricTaskInstanceEntity> findHistoricTasksByParentTaskId(String parentTaskId) {
+	    throw new UnsupportedOperationException();
+	}
+
 }

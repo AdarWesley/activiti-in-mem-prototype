@@ -57,6 +57,8 @@ public class InMemoryHistoricActivityInstanceDataManager extends AbstractInMemor
     throw new UnsupportedOperationException();
   }
 
-
-
+	public List<HistoricActivityInstanceEntity> findUnfinishedHistoricActivityInstancesByProcessInstanceId(
+			String processInstanceId) {
+	    throw new UnsupportedOperationException();
+	}
 }
